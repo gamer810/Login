@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Page</title>
+<style>
+  body { font-family: Arial, sans-serif; background-color: #f7f7f7; }
+  .login-container { max-width: 300px; margin: 100px auto; padding: 20px; background-color: #fff; border-radius: 5px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+  input[type="text"], input[type="password"] { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px; }
+  .btn { background-color: #5cb85c; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
+  .btn:hover { background-color: #45a049; }
+  .error { color: red; }
+</style>
+</head>
+<body>
+<div class="login-container">
+  <h2>Login</h2>
+  <input type="text" id="username" placeholder="Username">
+  <input type="password" id="password" placeholder="Password">
+  <button class="btn" onclick="login()">Submit</button>
+  <p id="error-msg" class="error"></p>
+</div>
+
+<script>
+  function login() {
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+    if(username == '478578' && password == '25769') {
+      // Redirect to the second webpage
+      window.location.href = 'second_page.html';
+    } else {
+      document.getElementById('error-msg').textContent = 'SORRY, YOU HAVE WRITTEN WRONG USERNAME OR PASSWORD';
+    }
+  }
+</script>
+</body>
+</html>
